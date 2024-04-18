@@ -3,15 +3,14 @@
 git clone https://github.com/yourusername/pdf-processing-library.git
 cd pdf-processing-library
 ```
-Set up a virtual environment:
-Setting up a virtual environment is recommended to manage dependencies cleanly:
+##Set up a virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
 
-Install the required dependencies:
+##Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -25,13 +24,13 @@ To process a PDF and extract numbers using the CLI, run:
 python src/cli.py /path/to/your/pdf/file.pdf
 ```
 
-REST API
-Start the FastAPI application:
+##REST API
+###Start the FastAPI application:
 
 ```bash
 uvicorn src.api:app --reload --host 0.0.0.0 --port 8000
 ```
-The API is accessible at http://localhost:8000. Use the endpoint /process-pdf/ to process PDF files:
+##The API is accessible at http://localhost:8000. Use the endpoint /process-pdf/ to process PDF files:
 
 ```bash
 curl -X 'POST' \
@@ -40,16 +39,16 @@ curl -X 'POST' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@/path/to/your/file.pdf;type=application/pdf'
 ```
-Docker
-To build and run the Docker container:
+##Docker
+###To build and run the Docker container:
 
 ```bash
 docker build -t my-pdf-app .
 docker run -p 8000:80 my-pdf-app
 ```
 
-Testing
-Execute tests using pytest:
+##Testing
+###Execute tests using pytest:
 
 ```bash
 pytest tests/
