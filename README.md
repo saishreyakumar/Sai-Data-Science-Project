@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 
 ```bash
-python src/cli.py /temp/filled_form_0.pdf # Or whatever Form you want to calculate the sum in, just add that particular pdf on to the temp folder
+python src/cli.py temp/filled_form_0.pdf # Or whatever Form you want to calculate the sum in, just add that particular pdf on to the temp folder
 ```
 
 ## For REST API
