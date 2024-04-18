@@ -30,7 +30,7 @@ python src/cli.py /temp/filled_form_0.pdf # Or whatever Form you want to calcula
 ```bash
 uvicorn src.api:app --reload --host 0.0.0.0 --port 8000
 ```
-## The API is accessible at http://localhost:8000. Use the endpoint /process-pdf/ to process PDF files:
+### The API is accessible at http://localhost:8000. Use the endpoint /process-pdf/ to process PDF files:
 
 ```bash
 curl -X 'POST' \
