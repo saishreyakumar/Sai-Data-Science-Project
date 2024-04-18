@@ -1,9 +1,11 @@
-FROM python:3.8-slim
+FROM python:3.8
 
 WORKDIR /app
 
-COPY . /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
+COPY src/ ./src
+COPY tests/ ./tests
 
-CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "80"]

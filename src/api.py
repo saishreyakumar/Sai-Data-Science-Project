@@ -1,5 +1,5 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
-from pdf_reader import PDFProcessor
+from src.pdf_reader import PDFProcessor
 import uvicorn
 import os
 import shutil

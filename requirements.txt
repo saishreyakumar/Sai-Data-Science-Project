@@ -2,3 +2,4 @@ pdfplumber
 fastapi
 uvicorn
 python-multipart
+pytest
